@@ -4,6 +4,11 @@ document.getElementById('cash-out-btn')
         const inputCashOut = document.getElementById('cash-out-input').value;
         const cashoutPin = document.getElementById('cash-out-pin').value;
 
+        if (isNaN(inputCashOut)) {
+            alert('Please input a valid number');
+            return;
+        }
+
         if (cashoutPin === '1234') {
             const currentBalance = document.getElementById('balance').innerText;
             const cashOutMoney = parseFloat(inputCashOut);

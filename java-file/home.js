@@ -3,6 +3,10 @@ document.getElementById('add-money-btn')
         event.preventDefault();
         const inputAmount = document.getElementById('input-amount').value;
         const inputPin = document.getElementById('input-pin').value;
+        if (isNaN(inputAmount)) {
+            alert('Please input a valid number');
+            return;
+        }
 
         if (inputPin === '1234') {
             const balance = document.getElementById('balance').innerText;
